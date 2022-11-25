@@ -11,10 +11,10 @@ import javax.validation.Valid;
 
 @RestController
 public class RhrpocEasyBeRestApi {
-    @GetMapping(path = { "/reverze-endpoint"})
+    @GetMapping(path = { "/reverse-endpoint"})
     public ResponseEntity<OutputDto> makeReverze(
-            @Valid @RequestParam (value = "id", required = true) String id,
-            @Valid @RequestParam (value = "name", required = true) String name
+            @Valid @RequestParam (value = "id") String id,
+            @Valid @RequestParam (value = "name") String name
             ) {
         String idReverse = new StringBuilder(id).reverse().toString();
         String nameReverse = new StringBuilder(name).reverse().toString();
