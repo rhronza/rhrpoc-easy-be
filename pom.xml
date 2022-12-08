@@ -16,7 +16,7 @@
     <name>rhrpoc-easy-be</name>
     <description>rhrpoc-easy-be</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <swagger.version>2.9.2</swagger.version>
         <springdoc-openapi-ui.version>1.4.8</springdoc-openapi-ui.version>
     </properties>
@@ -64,8 +64,16 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
