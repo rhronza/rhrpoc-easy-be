@@ -16,16 +16,16 @@ public class RhrpocEasyBeRestApi {
 
     private final Logger log = LoggerFactory.getLogger(RhrpocEasyBeRestApi.class);
 
-    @GetMapping(path = {"/reverse-endpoint"})
+    @GetMapping(path = {"/reverse-strings"})
     public ResponseEntity<OutputDto> makeReverze(
-            @Valid @RequestParam(value = "id") String id,
-            @Valid @RequestParam(value = "name") String name
+            @Valid @RequestParam(value = "string01") String string01,
+            @Valid @RequestParam(value = "string02") String string02
     ) {
         log.info("START");
-        log.info(" ID={}", id);
-        log.info("  NAME={}", name);
+        log.info(" ID={}", string01);
+        log.info("  NAME={}", string02);
 
-        OutputDto outputDto = reverseString(id, name);
+        OutputDto outputDto = reverseString(string01, string02);
 
         log.info("  outputDto={}", outputDto);
         log.info("END");
